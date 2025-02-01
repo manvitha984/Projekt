@@ -5,7 +5,7 @@ export default function Sidebar() {
     <div className="w-64 bg-white shadow-lg p-6 h-screen fixed">
       <h1 className="text-2xl font-bold text-gray-900 mb-8">Projekt</h1>
       <nav className="space-y-4">
-        {["Home", "Projects", "Tasks", "Calendar", "Settings"].map((item, index) => (
+        {["Home", "Projects","hi", "Tasks", "Calendar", "Settings"].map((item, index) => (
           <Link
             key={index}
             to={`/${item.toLowerCase()}`}

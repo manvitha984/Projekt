@@ -43,24 +43,8 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-[#FFF8F8] flex">
-
-
-      <div className="w-64 bg-white shadow-lg p-6">
-        <h1 className="text-2xl font-bold text-gray-900 mb-8">Projekt</h1>
-        <nav className="space-y-4">
-          {["Home", "Projects", "Tasks", "Calendar", "Settings"].map(
-            (item, index) => (
-              <Link
-                key={index}
-                to="#"
-                className="block text-gray-700 hover:text-[#FE6059] font-medium"
-              >
-                {item}
-              </Link>
-            )
-          )}
-        </nav>
-      </div>
+      {/* Left Navbar */}
+    
 
       {/* Main Content */}
       <div className="flex-1 p-8">

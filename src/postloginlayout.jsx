@@ -1,0 +1,62 @@
+import { Link, Outlet } from "react-router-dom";
+import logo from "./assets/logo.png";
+
+export default function PostLoginLayout() {
+  return (
+    <div className="min-h-screen bg-[#FFF8F8] flex">
+      {/* Left Navbar */}
+      <div className="w-64 bg-white shadow-lg p-7">
+        {/* Logo */}
+        <div className="ml-[-20px]">
+          <img src={logo} alt="Projekt Logo" className="w-40 h-auto" />
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="space-y-6">
+          <Link
+            to="/dashboard"
+            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
+          >
+            Home
+          </Link>
+          <Link
+            to="/taskpage"
+            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
+          >
+            Tasks
+          </Link>
+          <Link
+            to="/calendar"
+            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
+          >
+            Calendar
+          </Link>
+          <Link
+            to="/messages"
+            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
+          >
+            Messages
+          </Link>
+          <Link
+            to="/settings"
+            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
+          >
+            Settings
+          </Link>
+        </nav>
+
+        {/* Footer in the Navbar */}
+        <div className="mt-8 pt-8 border-t border-gray-200">
+          <p className="text-sm text-gray-500">
+            &copy; 2025 Projekt. All rights reserved.
+          </p>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-1 p-8">
+        <Outlet />
+      </div>
+    </div>
+  );
+}
