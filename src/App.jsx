@@ -7,9 +7,7 @@ import SlidesSection from "./Slides";
 import Footer from "./footer";
 import LoginPage from "./login";
 import Signup from "./signup";
-
-
-
+import Dashboard from "./dashboard";
 export default function App() {
   return (
     <Router>
@@ -29,6 +27,8 @@ export default function App() {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+
       </Routes>
     </Router>
   );
