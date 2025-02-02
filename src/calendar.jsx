@@ -44,7 +44,6 @@ export default function CalendarPage() {
     setShowModal(true);
   };
 
-  // Function to add note to the selected date
   const handleAddNote = () => {
     if (note.trim() !== "" && selectedDate) {
       const newEvent = {
@@ -79,7 +78,7 @@ export default function CalendarPage() {
           onSelectSlot={handleSelectDate}
           eventPropGetter={() => ({
             style: {
-              backgroundColor: "#FE6059", // Your primary color
+              backgroundColor: "#FE6059", 
               border: "none",
               borderRadius: "8px",
               color: "white",
@@ -94,7 +93,6 @@ export default function CalendarPage() {
         />
       </div>
 
-      {/* Modal for Adding Note */}
       {showModal && selectedDate && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4">

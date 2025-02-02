@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import logo from "./assets/logo.png";
 
-export default function PostLoginLayout() {
+export default function adminsidebar() {
   return (
     <div className="min-h-screen bg-[#FFF8F8] flex">
       <div className="w-64 bg-white shadow-lg p-7">
@@ -11,35 +11,30 @@ export default function PostLoginLayout() {
 
         <nav className="space-y-6">
           <Link
-            to="/dashboard"
+            to="/adminprojects"
             className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
           >
-            Home
+            Projects
           </Link>
-          <Link
-            to="/taskpage"
+           <Link
+            to="/admintaskpage"
             className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
-          >
-            Tasks
-          </Link>
-          <Link
-            to="/calendar"
-            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
-          >
-            Calendar
-          </Link>
-          <Link
-            to="/messages"
-            className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
-          >
-            Messages
-          </Link>
+          >Tasks
+              </Link>
+              <Link
+                to="/adminmessages"
+                className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
+              >
+                Messages
+              </Link>
+            {/*
+            
           <Link
             to="/settings"
             className="block text-gray-700 hover:text-[#FE6059] font-medium transition duration-300 ease-in-out transform hover:translate-x-2"
           >
             Settings
-          </Link>
+          </Link> */}
         </nav>
 
         <div className="mt-8 pt-8 border-t border-gray-200">

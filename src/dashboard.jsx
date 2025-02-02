@@ -43,10 +43,8 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-[#FFF8F8] flex">
-      {/* Left Navbar */}
     
 
-      {/* Main Content */}
       <div className="flex-1 p-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">
           Welcome back, {userName}!
@@ -55,9 +53,7 @@ export default function Dashboard() {
           Here's an overview of your activity.
         </p>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Progress Card */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Overall Progress
@@ -77,7 +73,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Tasks Needing Attention Card */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Tasks Needing Attention
@@ -91,7 +86,6 @@ export default function Dashboard() {
             </ul>
           </div>
 
-          {/* To-Do Task Card */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Set Tasks for Today
@@ -133,7 +127,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Project Summary Card */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Project Summary
@@ -147,7 +140,6 @@ export default function Dashboard() {
             </ul>
           </div>
 
-          {/* Weekly Progress Card */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Weekly Progress
@@ -163,7 +155,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Collaborators Card */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Worked With

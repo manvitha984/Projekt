@@ -15,11 +15,9 @@ const priorityColors = {
   Low: "bg-green-500",
 };
 
-// Function to calculate priority dynamically
 const calculatePriority = (timeLeft) => {
   let totalHours = 0;
 
-  // Extract days and hours from timeLeft string
   const daysMatch = timeLeft.match(/(\d+)d/);
   const hoursMatch = timeLeft.match(/(\d+)h/);
 
@@ -50,7 +48,6 @@ export default function TaskPage() {
     <div className="min-h-screen bg-[#FFF8F8] p-8">
       <h1 className="text-3xl font-bold text-gray-900 mb-6">Tasks</h1>
 
-      {/* Message UI for confirmation */}
       {message && (
         <div className="mb-4 bg-green-100 text-green-700 p-3 rounded-lg shadow-md text-center transition-opacity duration-500">
           {message}
@@ -73,7 +70,6 @@ export default function TaskPage() {
                 ></div>
               </div>
 
-              {/* Task Info */}
               <div className="flex-1">
                 <h2 className="text-xl font-bold text-gray-900">{task.title}</h2>
                 <p className="text-gray-600 text-sm">
@@ -91,19 +87,16 @@ export default function TaskPage() {
                 </p>
               </div>
 
-              {/* Priority Label */}
               <span
                 className={`text-white text-sm font-medium px-3 py-1 rounded-full ${priorityColors[priority]}`}
               >
                 {priority}
               </span>
 
-              {/* Timer */}
               <div className="ml-6 text-gray-700 font-semibold text-lg">
                 ⏳ {task.timeLeft}
               </div>
 
-              {/* Done Button */}
               {task.status === "In Progress" && (
                 <button
                   onClick={() => handleMarkAsDone(task.id)}

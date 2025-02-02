@@ -1,15 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const [role, setRole] = useState("user"); 
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    if (email === "user@example.com" && password === "password123") {
-      navigate("/dashboard");
+    if (role === "admin" && email === "admin@example.com" && password === "admin123") {
+      navigate("/adminprojects"); 
+    }
+    else if (role === "user" && email === "user@example.com" && password === "password123") {
+      navigate("/dashboard"); 
     } else {
       alert("Invalid email or password");
     }
@@ -22,6 +27,28 @@ export default function LoginPage() {
           Welcome Back!
         </h2>
         <form className="space-y-6" onSubmit={handleLogin}>
+       
+          <div>
+            <label
+              htmlFor="role"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Login As
+            </label>
+            <select
+              id="role"
+              name="role"
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FE6059] focus:border-transparent"
+              required
+            >
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+
+        
           <div>
             <label
               htmlFor="email"
@@ -38,6 +65,7 @@ export default function LoginPage() {
               required
             />
           </div>
+
           <div>
             <label
               htmlFor="password"
@@ -54,6 +82,7 @@ export default function LoginPage() {
               required
             />
           </div>
+
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <input
@@ -78,6 +107,7 @@ export default function LoginPage() {
               </a>
             </div>
           </div>
+
           <div>
             <button
               type="submit"
@@ -87,6 +117,7 @@ export default function LoginPage() {
             </button>
           </div>
         </form>
+
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Don't have an account?{" "}

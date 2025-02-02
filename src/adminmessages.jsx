@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Messages() {
+export default function adminmessages() {
   const [selectedChat, setSelectedChat] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -71,7 +71,7 @@ export default function Messages() {
       <div className="flex-1 flex flex-col bg-white shadow-lg">
         {selectedChat ? (
           <>
-            <div className="p-4 border-b flex items-center justify-between bg-gray-100">
+\            <div className="p-4 border-b flex items-center justify-between bg-gray-100">
               <h2 className="text-lg font-semibold">
                 {contacts.find((c) => c.id === selectedChat)?.name}
               </h2>
