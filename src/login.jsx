@@ -1,20 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export default function LoginPage() {
   const navigate = useNavigate();
-  const [role, setRole] = useState("user"); 
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    if (role === "admin" && email === "admin@example.com" && password === "admin123") {
-      navigate("/adminprojects"); 
-    }
-    else if (role === "user" && email === "user@example.com" && password === "password123") {
-      navigate("/dashboard"); 
+    if (email === "user@example.com" && password === "password123") {
+      navigate("/dashboard");
     } else {
       alert("Invalid email or password");
     }
@@ -27,33 +22,8 @@ export default function LoginPage() {
           Welcome Back!
         </h2>
         <form className="space-y-6" onSubmit={handleLogin}>
-       
           <div>
-            <label
-              htmlFor="role"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Login As
-            </label>
-            <select
-              id="role"
-              name="role"
-              value={role}
-              onChange={(e) => setRole(e.target.value)}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FE6059] focus:border-transparent"
-              required
-            >
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
-            </select>
-          </div>
-
-        
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email
             </label>
             <input
@@ -67,10 +37,7 @@ export default function LoginPage() {
           </div>
 
           <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
               Password
             </label>
             <input
@@ -91,18 +58,12 @@ export default function LoginPage() {
                 name="remember-me"
                 className="h-4 w-4 text-[#FE6059] focus:ring-[#FE6059] border-gray-300 rounded"
               />
-              <label
-                htmlFor="remember-me"
-                className="ml-2 block text-sm text-gray-900"
-              >
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                 Remember me
               </label>
             </div>
             <div className="text-sm">
-              <a
-                href="#"
-                className="font-medium text-[#FE6059] hover:text-red-600"
-              >
+              <a href="#" className="font-medium text-[#FE6059] hover:text-red-600">
                 Forgot your password?
               </a>
             </div>
@@ -120,11 +81,8 @@ export default function LoginPage() {
 
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account?{" "}
-            <Link
-              to="/signup"
-              className="font-medium text-[#FE6059] hover:text-red-600"
-            >
+            Don't have an account? {" "}
+            <Link to="/signup" className="font-medium text-[#FE6059] hover:text-red-600">
               Sign up
             </Link>
           </p>

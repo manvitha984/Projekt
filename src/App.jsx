@@ -16,6 +16,7 @@ import AdminProjectsPage from "./adminprojects";
 import AdminSidebar from "./adminsidebar"; 
 import Admintaskpage from "./admintaskpage";
 import Adminmessages from "./adminmessages";
+import Projects from "./projects";
 export default function App() {
   return (
     <Router>
@@ -38,6 +39,7 @@ export default function App() {
 
         <Route element={<PostLoginLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/taskpage" element={<Tasks />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/messages" element={<Messages />} />
